@@ -46,7 +46,7 @@ class Contact extends StatelessWidget {
                   Container(
                     height: 40,
                     color: Colors.white,
-                    width: MediaQuery.of(context).size.width * 0.58,
+                    width: MediaQuery.of(context).size.width * 0.56,
                     child: TextField(
                       controller: emailController,
                       decoration: InputDecoration(
