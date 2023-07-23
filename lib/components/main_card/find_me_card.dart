@@ -107,6 +107,7 @@ class FindMeCard extends StatelessWidget {
                 Text(
                   link,
                   style: subHeadingStyle,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),

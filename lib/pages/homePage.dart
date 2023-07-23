@@ -3,13 +3,14 @@ import 'package:portfolio/components/contact/contact.dart';
 import 'package:portfolio/components/educations/educations.dart';
 import 'package:portfolio/components/experiences/experiences.dart';
 import 'package:portfolio/components/games/games.dart';
-import 'package:portfolio/components/latest_project/latestProject.dart';
-import 'package:portfolio/components/main_card/findMeCard.dart';
-import 'package:portfolio/components/main_card/funFactCard.dart';
-import 'package:portfolio/components/main_card/introCard.dart';
-import 'package:portfolio/components/tech_stack/techStack.dart';
+import 'package:portfolio/components/latest_project/latest_project.dart';
+import 'package:portfolio/components/main_card/find_me_card.dart';
+import 'package:portfolio/components/main_card/funfact_card.dart';
+import 'package:portfolio/components/main_card/intro_card.dart';
+import 'package:portfolio/components/tech_stack/tech_stack.dart';
 import 'package:portfolio/theme.dart';
 import 'package:portfolio/components/button1.dart';
+import 'package:portfolio/components/navigation_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,6 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int card = 1;
   List<bool> clicked = [true, false, false];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,14 +32,18 @@ class _HomePageState extends State<HomePage> {
           style: titleStyle,
         ),
         // actions tuh kek leading tp sebelah kanan
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.menu,
-          ),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: const Icon(
+        //     Icons.menu,
+        //   ),
+        // ),
         toolbarHeight: 45,
         backgroundColor: primaryColor,
+      ),
+      drawer: Drawer(
+        backgroundColor: primaryColor,
+        child: NavDrawer(),
       ),
       body: ListView(
         children: [

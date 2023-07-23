@@ -1,7 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/tech_stack/techStackListView.dart';
+import 'package:portfolio/components/tech_stack/techstack_listview.dart';
 import 'package:portfolio/theme.dart';
+import 'package:portfolio/data.dart';
 
 class TechStack extends StatefulWidget {
   const TechStack({super.key});
@@ -12,45 +13,6 @@ class TechStack extends StatefulWidget {
 
 class _TechStackState extends State<TechStack> {
   ScrollController _scrollController = ScrollController();
-
-  List<Map<dynamic, dynamic>> images = [
-    {
-      'images': 'assets/techstack/flutter.png',
-      'title': 'Flutter',
-    },
-    {
-      'images': 'assets/techstack/android.png',
-      'title': 'Android',
-    },
-    {
-      'images': 'assets/techstack/vscode.png',
-      'title': 'Vs Code',
-    },
-    {
-      'images': 'assets/techstack/git.png',
-      'title': 'Flutter',
-    },
-    {
-      'images': 'assets/techstack/github.png',
-      'title': 'Android',
-    },
-    {
-      'images': 'assets/techstack/figma.png',
-      'title': 'Vs Code',
-    },
-    {
-      'images': 'assets/techstack/mysql.png',
-      'title': 'Flutter',
-    },
-    {
-      'images': 'assets/techstack/openai.png',
-      'title': 'Android',
-    },
-    {
-      'images': 'assets/techstack/nextjs.png',
-      'title': 'Vs Code',
-    }
-  ];
 
   // @override
   // void initState() {

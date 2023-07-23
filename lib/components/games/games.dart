@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/games/gamesCard.dart';
+import 'package:portfolio/components/games/games_card.dart';
 import 'package:portfolio/theme.dart';
 
 class Games extends StatelessWidget {

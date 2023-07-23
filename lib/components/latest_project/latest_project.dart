@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/latest_project/bannerProject.dart';
+import 'package:portfolio/components/latest_project/banner_project.dart';
+import 'package:portfolio/data.dart';
 
 class LatestProject extends StatefulWidget {
   const LatestProject({super.key});
@@ -26,25 +27,6 @@ class _LatestProjectState extends State<LatestProject> {
         ),
       );
     }
-
-    List ProjectData = [
-      {
-        'title': 'Kweekstop - post uts',
-        'description':
-            'Website ini merupakan website e-commerce hasil project tugas mata kuliah WIRPL selama setengah semester. \nskills: mysql, next.js',
-        'image': 'assets/projects/kweekstop.png',
-      },
-      {
-        'title': 'Kweekstop - pra uts',
-        'description': 'Description 2',
-        'image': 'assets/projects/kweekstop2.png',
-      },
-      {
-        'title': 'Rejoin',
-        'description': 'Description 3',
-        'image': 'assets/projects/rejoin.png',
-      },
-    ];
 
     return Column(
       children: [
