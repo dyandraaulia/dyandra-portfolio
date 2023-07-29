@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/pages/homepage.dart';
+import 'package:portfolio/pages/project_details.dart';
 import 'package:portfolio/theme.dart';
 
 void main() {
@@ -19,8 +20,11 @@ class MyApp extends StatelessWidget {
       //     Theme.of(context).textTheme,
       //   ),
       // ),
-      home: const HomePage(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/': (context) => const HomePage(),
+        '/project-details': (context) => const ProjectDetails(),
+      },
     );
   }
 }
