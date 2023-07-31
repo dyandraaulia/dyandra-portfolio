@@ -111,3 +111,41 @@ List ProjectData = [
     'image': 'assets/projects/rejoin.png',
   },
 ];
+
+var ProjectData2 = {
+  {
+    'title': 'Kweekstop - post uts',
+    'description':
+        'Website ini merupakan website e-commerce hasil project tugas mata kuliah WIRPL selama setengah semester. \nskills: mysql, next.js',
+    'galleries': [
+      'assets/projects/kweekstop.png',
+      'assets/projects/kweekstop/product_data.png',
+      'assets/projects/kweekstop/detail-product.png',
+      'assets/projects/kweekstop/cart.png',
+      'assets/projects/kweekstop/midtrans-payment.png',
+      'assets/projects/kweekstop/login-page.png',
+      'assets/projects/kweekstop/admin-page.png',
+    ],
+  },
+  {
+    'title': 'Kweekstop - pra uts',
+    'description': 'Description 2',
+    'galleries': [
+      'assets/projects/kweekstop2.png',
+      'assets/projects/kweekstop2/list-product.png',
+      'assets/projects/kweekstop2/product-details.png',
+      'assets/projects/kweekstop2/cart.png',
+      'assets/projects/kweekstop2/billing-details.png',
+      'assets/projects/kweekstop2/midtrans-duitku.png',
+      'assets/projects/kweekstop2/profile-details.png',
+    ],
+  },
+  {
+    'title': 'Rejoin',
+    'description': 'Description 3',
+    'galleries': [
+      'assets/projects/rejoin.png',
+      'assets/projects/rejoin/shortcut.png',
+    ]
+  },
+};
