@@ -3,21 +3,25 @@ import 'package:portfolio/components/tech_stack/techstack_listview.dart';
 import 'package:portfolio/data.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:portfolio/theme.dart';
+import 'package:portfolio/models/projects.dart';
 
 class ProjectDetails extends StatelessWidget {
-  const ProjectDetails({super.key});
+  final Project project;
+
+  const ProjectDetails({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
+        color: secondaryColor,
         panel: Padding(
           padding: const EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'judul'.toUpperCase(),
+                project.title.toUpperCase(),
                 style: headingStyle.copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -74,7 +78,7 @@ class ProjectDetails extends StatelessWidget {
                 height: 12,
               ),
               Text(
-                'Lorem ipsum dolor si',
+                project.description,
                 style: subHeadingStyle.copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
@@ -107,8 +111,8 @@ class ProjectDetails extends StatelessWidget {
                 height: 50,
               ),
               Image.asset(
-                images[0]['images'],
-              )
+                project.galleries[0],
+              ),
             ],
           ),
         ),

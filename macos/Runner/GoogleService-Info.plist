@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1095384619265-dt65hvrgflo54bbs6v5qlgfr3tkdojo6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1095384619265-dt65hvrgflo54bbs6v5qlgfr3tkdojo6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB6ji1EcTw-xToDya86bUauigpOyRtyyuU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1095384619265</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.portfolio.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>latihan-1-55dec</string>
+	<key>STORAGE_BUCKET</key>
+	<string>latihan-1-55dec.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1095384619265:ios:101694e6c1a0ca6fdbe300</string>
+</dict>
+</plist>

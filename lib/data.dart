@@ -112,8 +112,9 @@ List ProjectData = [
   },
 ];
 
-var ProjectData2 = {
+var ProjectData2 = [
   {
+    'id': 1,
     'title': 'Kweekstop - post uts',
     'description':
         'Website ini merupakan website e-commerce hasil project tugas mata kuliah WIRPL selama setengah semester. \nskills: mysql, next.js',
@@ -126,8 +127,10 @@ var ProjectData2 = {
       'assets/projects/kweekstop/login-page.png',
       'assets/projects/kweekstop/admin-page.png',
     ],
+    'url': 'url1',
   },
   {
+    'id': 2,
     'title': 'Kweekstop - pra uts',
     'description': 'Description 2',
     'galleries': [
@@ -139,13 +142,16 @@ var ProjectData2 = {
       'assets/projects/kweekstop2/midtrans-duitku.png',
       'assets/projects/kweekstop2/profile-details.png',
     ],
+    'url': 'url2',
   },
   {
+    'id': 3,
     'title': 'Rejoin',
     'description': 'Description 3',
     'galleries': [
       'assets/projects/rejoin.png',
       'assets/projects/rejoin/shortcut.png',
-    ]
+    ],
+    'url': 'url3',
   },
-};
+];

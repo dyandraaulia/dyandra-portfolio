@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/theme.dart';
+import 'package:portfolio/models/projects.dart';
+import 'package:portfolio/pages/project_details.dart';
 
 class BannerProject extends StatelessWidget {
-  var image;
-  var title;
-  var description;
+  Project? project;
 
-  BannerProject({super.key, this.image, this.title, this.description});
+  BannerProject({super.key, this.project});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, '/project-details');
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ProjectDetails(project: project!)));
       },
       child: Container(
         color: Colors.transparent,
@@ -30,7 +33,7 @@ class BannerProject extends StatelessWidget {
                 child: SizedBox(
                   height: 150,
                   child: Image.asset(
-                    image,
+                    project!.galleries[0],
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -45,7 +48,7 @@ class BannerProject extends StatelessWidget {
                       color: primaryColor.withOpacity(0.8),
                     ),
                     child: Text(
-                      title + ' >',
+                      project!.title + ' >',
                       style: subHeadingStyle.copyWith(
                           fontSize: 13,
                           fontWeight: FontWeight.w100,

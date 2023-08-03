@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/latest_project/banner_project.dart';
 import 'package:portfolio/data.dart';
+import 'package:portfolio/models/projects.dart';
 
 class LatestProject extends StatefulWidget {
   const LatestProject({super.key});
@@ -16,6 +17,8 @@ class _LatestProjectState extends State<LatestProject> {
   @override
   Widget build(BuildContext context) {
     int index = -1;
+    final projects = ProjectData2.map((data) => Project.fromMap(data)).toList();
+
     Widget indicator(int index) {
       return Container(
         width: 5,
@@ -31,13 +34,23 @@ class _LatestProjectState extends State<LatestProject> {
     return Column(
       children: [
         CarouselSlider(
-          items: ProjectData.map((project) {
+          // key: ValueKey(projects[currentIndex].id),
+          // items: ProjectData2.map((project) {
+          //   return Builder(
+          //     builder: (BuildContext context) {
+          //       return BannerProject(
+          //         image: project['galleries'],
+          //         title: project['title'],
+          //         description: project['description'],
+          //       );
+          //     },
+          //   );
+          // }).toList(),
+          items: projects.map((project) {
             return Builder(
               builder: (BuildContext context) {
                 return BannerProject(
-                  image: project['image'],
-                  title: project['title'],
-                  description: project['description'],
+                  project: project,
                 );
               },
             );
