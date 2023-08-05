@@ -34,18 +34,6 @@ class _LatestProjectState extends State<LatestProject> {
     return Column(
       children: [
         CarouselSlider(
-          // key: ValueKey(projects[currentIndex].id),
-          // items: ProjectData2.map((project) {
-          //   return Builder(
-          //     builder: (BuildContext context) {
-          //       return BannerProject(
-          //         image: project['galleries'],
-          //         title: project['title'],
-          //         description: project['description'],
-          //       );
-          //     },
-          //   );
-          // }).toList(),
           items: projects.map((project) {
             return Builder(
               builder: (BuildContext context) {

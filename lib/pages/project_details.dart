@@ -4,6 +4,7 @@ import 'package:portfolio/data.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:portfolio/theme.dart';
 import 'package:portfolio/models/projects.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class ProjectDetails extends StatelessWidget {
   final Project project;
@@ -14,6 +15,8 @@ class ProjectDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
+        parallaxEnabled: true,
+        parallaxOffset: 0.2,
         color: secondaryColor,
         panel: Padding(
           padding: const EdgeInsets.all(30),
@@ -71,7 +74,7 @@ class ProjectDetails extends StatelessWidget {
                 'Description',
                 style: subHeadingStyle.copyWith(
                   fontSize: 14,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(
@@ -91,7 +94,7 @@ class ProjectDetails extends StatelessWidget {
                 'Tech Stack',
                 style: subHeadingStyle.copyWith(
                   fontSize: 14,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(
@@ -104,20 +107,30 @@ class ProjectDetails extends StatelessWidget {
             ],
           ),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 50,
+        body: Column(
+          children: [
+            CarouselSlider(
+              items: project.galleries
+                  .map((e) => Image.asset(
+                        e,
+                        fit: BoxFit.cover,
+                        width: MediaQuery.of(context).size.width * 6,
+                        height: MediaQuery.of(context).size.height * 0.63,
+                      ))
+                  .toList(),
+              options: CarouselOptions(
+                enlargeCenterPage: true,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 4),
+                scrollDirection: Axis.horizontal,
+                initialPage: 0,
+                enableInfiniteScroll: false,
               ),
-              Image.asset(
-                project.galleries[0],
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-        minHeight: MediaQuery.of(context).size.height * 0.6,
-        maxHeight: MediaQuery.of(context).size.height * 0.65,
+        minHeight: MediaQuery.of(context).size.height * 0.64,
+        maxHeight: MediaQuery.of(context).size.height * 0.68,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),
           topRight: Radius.circular(40),
