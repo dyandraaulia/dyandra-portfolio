@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const Tictactoe(),
+        '/': (context) => const HomePage(),
+        '/tictactoe': (context) => const Tictactoe(),
         // '/project-details': (context) => const ProjectDetails(),
       },
     );

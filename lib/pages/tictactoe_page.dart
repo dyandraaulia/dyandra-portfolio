@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/theme.dart';
+import 'package:portfolio/components/navigation_drawer.dart';
 
 class Tictactoe extends StatefulWidget {
   const Tictactoe({super.key});
@@ -97,6 +98,14 @@ class _TictactoeState extends State<Tictactoe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 45,
+        backgroundColor: primaryColor,
+      ),
+      drawer: Drawer(
+        backgroundColor: primaryColor,
+        child: NavDrawer(),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50),
         child: Center(
@@ -110,6 +119,9 @@ class _TictactoeState extends State<Tictactoe> {
                   fontWeight: FontWeight.w600,
                   color: Color(0xff7D2574),
                 ),
+              ),
+              SizedBox(
+                height: 50,
               ),
               GridView.builder(
                 shrinkWrap: true,
@@ -140,20 +152,25 @@ class _TictactoeState extends State<Tictactoe> {
                         child: Text(
                           board[index],
                           style: headingStyle.copyWith(
-                            shadows: [
-                              Shadow(
-                                color:
-                                    Colors.white, // Warna putih melingkupi teks
-                                offset: Offset(-1, -1), // Posisi shadow putih
-                                blurRadius: 10, // Blur radius shadow putih
-                              ),
-                              Shadow(
-                                color: Colors.black.withOpacity(
-                                    0.1), // Warna hitam untuk background shadow
-                                offset: Offset(2, 2), // Posisi shadow hitam
-                                blurRadius: 4, // Blur radius shadow hitam
-                              ),
-                            ],
+                            shadows: winner == ''
+                                ? [
+                                    Shadow(
+                                      color: Colors
+                                          .white, // Warna putih melingkupi teks
+                                      offset:
+                                          Offset(-1, -1), // Posisi shadow putih
+                                      blurRadius:
+                                          10, // Blur radius shadow putih
+                                    ),
+                                    Shadow(
+                                      color: Colors.black.withOpacity(
+                                          0.1), // Warna hitam untuk background shadow
+                                      offset:
+                                          Offset(2, 2), // Posisi shadow hitam
+                                      blurRadius: 4, // Blur radius shadow hitam
+                                    ),
+                                  ]
+                                : [],
                             fontSize: 36,
                             fontWeight: FontWeight.w600,
                             color: winBoard[index]

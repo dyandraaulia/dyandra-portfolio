@@ -9,32 +9,37 @@ class GamesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: 10, top: 20, bottom: 20, right: 10),
-      // double infinity?
-      width: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
-        boxShadow: boxShadow2,
-      ),
-      child: Column(
-        children: [
-          Image.asset(
-            image!,
-            height: 90,
-            fit: BoxFit.cover,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            title!,
-            style: subHeadingStyle.copyWith(
-              fontSize: 12,
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/tictactoe');
+      },
+      child: Container(
+        margin: EdgeInsets.only(left: 10, top: 20, bottom: 20, right: 10),
+        // double infinity?
+        width: 150,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          boxShadow: boxShadow2,
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              image!,
+              height: 90,
+              fit: BoxFit.cover,
             ),
-          ),
-        ],
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              title!,
+              style: subHeadingStyle.copyWith(
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

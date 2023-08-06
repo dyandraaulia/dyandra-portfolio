@@ -20,16 +20,18 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 30),
-            leading: Icon(Icons.exit_to_app, color: Colors.white),
+            leading: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
             title: Text(
-              'Out',
+              'Home',
               style: headingStyle.copyWith(
                 color: Colors.white,
               ),
             ),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.pushNamed(context, '/');
             },
           ),
           ListTile(
@@ -39,7 +41,7 @@ class NavDrawer extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              'Games',
+              'Mini Projects',
               style: headingStyle.copyWith(
                 color: Colors.white,
               ),
@@ -51,19 +53,16 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 30),
-            leading: Icon(
-              Icons.settings,
-              color: Colors.white,
-            ),
+            leading: Icon(Icons.exit_to_app, color: Colors.white),
             title: Text(
-              'Settings',
+              'Out',
               style: headingStyle.copyWith(
                 color: Colors.white,
               ),
             ),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              // exit the app
+              Navigator.pop(context);
             },
           ),
         ],
