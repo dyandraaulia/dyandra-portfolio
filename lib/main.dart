@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/pages/homepage.dart';
 import 'package:portfolio/pages/project_details.dart';
+import 'package:portfolio/pages/tictactoe_page.dart';
 import 'package:portfolio/theme.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const Tictactoe(),
         // '/project-details': (context) => const ProjectDetails(),
       },
     );
