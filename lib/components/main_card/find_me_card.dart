@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FindMeCard extends StatelessWidget {
   const FindMeCard({super.key});
@@ -62,11 +63,17 @@ class FindMeCard extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                button('assets/icons/gmail.png', 'dyandraaulia157@gmail.com'),
-                button('assets/icons/github.png', 'github.com/dyandraaulia'),
-                button('assets/icons/linkedin.png',
+                button('assets/icons/gmail.png', 'dyandraaulia157@gmail.com',
+                    'mailto:dyandraaulia157@gmail.com?subject=&body='),
+                button('assets/icons/github.png', 'github.com/dyandraaulia',
+                    'github.com/dyandraaulia'),
+                button(
+                    'assets/icons/linkedin.png',
+                    'linkedin.com/in/dyandraaulia',
                     'linkedin.com/in/dyandraaulia'),
-                button('assets/icons/instagram.png',
+                button(
+                    'assets/icons/instagram.png',
+                    'instagram.com/dyandraauliaa',
                     'instagram.com/dyandraauliaa'),
               ],
             ),
@@ -76,11 +83,23 @@ class FindMeCard extends StatelessWidget {
     );
   }
 
-  Widget button(String image, String link) {
+  Future<void> launchURL(Uri url) async {
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Widget button(String image, String link, String url) {
+    final Uri _url = Uri.parse(url);
+
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            launchURL(_url);
+          },
           child: Container(
             height: 20,
             decoration: BoxDecoration(
